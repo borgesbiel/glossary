@@ -1,3 +1,3 @@
 class Word < ApplicationRecord
-  default_scope { order('title') }
+  default_scope { order('title asc') }
 end

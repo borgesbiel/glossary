@@ -1,0 +1,29 @@
+<script type="text/javascript">
+  var alphabet = $('ul.alphabet li a');
+  var titles = $('ul.title li a');
+  var descriptions = $('ul.description li strong');
+
+  alphabet.click(function () {
+      var alphabetLetter = $(this).text();
+
+      descriptions.parent().hide();
+      titles.parent().hide();
+
+      titles.each(function () {
+          var title = $(this).text().replace(/[^a-z0-9\s]/gi, '');
+          var titleFirstLetter = title.substr(0, 1);
+
+          if (titleFirstLetter == alphabetLetter) {
+              $('#title_' + title.split(' ')[0]).show();
+          }
+      });
+  });
+
+  titles.click(function () {
+      var description = $(this).text().replace(/[^a-z0-9\s]/gi, '');
+
+      descriptions.parent().hide();
+
+      $('#description_' + description.split(' ')[0]).show();
+  });
+</script>

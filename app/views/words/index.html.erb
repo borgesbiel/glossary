@@ -1,55 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Words</h1>
+<h1>Glossary</h1>
 
 <ul class="alphabet">
-    <li><a>A</a></li>
-    <li><a>B</a></li>
-    <li><a>C</a></li>
-    <li><a>D</a></li>
-    <li><a>E</a></li>
-    <li><a>F</a></li>
-    <li><a>G</a></li>
-    <li><a>H</a></li>
-    <li><a>I</a></li>
-    <li><a>J</a></li>
-    <li><a>K</a></li>
-    <li><a>L</a></li>
-    <li><a>M</a></li>
-    <li><a>N</a></li>
-    <li><a>O</a></li>
-    <li><a>P</a></li>
-    <li><a>Q</a></li>
-    <li><a>R</a></li>
-    <li><a>S</a></li>
-    <li><a>T</a></li>
-    <li><a>U</a></li>
-    <li><a>V</a></li>
-    <li><a>X</a></li>
-    <li><a>Y</a></li>
-    <li><a>Z</a></li>
+  <li class="alphabet_letter"><a>A</a></li>
+  <li class="alphabet_letter"><a>B</a></li>
+  <li class="alphabet_letter"><a>C</a></li>
+  <li class="alphabet_letter"><a>D</a></li>
+  <li class="alphabet_letter"><a>E</a></li>
+  <li class="alphabet_letter"><a>F</a></li>
+  <li class="alphabet_letter"><a>G</a></li>
+  <li class="alphabet_letter"><a>H</a></li>
+  <li class="alphabet_letter"><a>I</a></li>
+  <li class="alphabet_letter"><a>J</a></li>
+  <li class="alphabet_letter"><a>K</a></li>
+  <li class="alphabet_letter"><a>L</a></li>
+  <li class="alphabet_letter"><a>M</a></li>
+  <li class="alphabet_letter"><a>N</a></li>
+  <li class="alphabet_letter"><a>O</a></li>
+  <li class="alphabet_letter"><a>P</a></li>
+  <li class="alphabet_letter"><a>Q</a></li>
+  <li class="alphabet_letter"><a>R</a></li>
+  <li class="alphabet_letter"><a>S</a></li>
+  <li class="alphabet_letter"><a>T</a></li>
+  <li class="alphabet_letter"><a>U</a></li>
+  <li class="alphabet_letter"><a>V</a></li>
+  <li class="alphabet_letter"><a>X</a></li>
+  <li class="alphabet_letter"><a>Y</a></li>
+  <li class="alphabet_letter"><a>Z</a></li>
 </ul>
 
-<ul class="glossary">
-  <% @words.each do |word| %>
-    <li> <%= word.title %> - <strong><%= word.title.first %></strong>: <%= word.description %></li>
-  <% end %>
-</ul>
+<br>
 
-<script type="text/javascript">
-  var triggers = $('ul.alphabet li a');
-  var glossary = $('ul.glossary li strong');
+<%= render 'title' %>
 
-  triggers.click(function() {
-    console.log('teste');
-      var Letter = $(this).text();
-      glossary.parent().hide();
+<%= render 'description' %>
 
-      glossary.each(function(i) {
-        var FirstLetter = $(this).text().substr(0,1);
-        if ( FirstLetter ==  Letter ) {
-            $(this).parent().fadeIn(200);
-        }
-    });
-  });
-</script>
+<%= render 'glossary_scripts' %>

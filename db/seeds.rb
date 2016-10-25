@@ -476,10 +476,6 @@ entities = [
     description: "Les conditions de fonctionnement et de surveillance de ces marchés peuvent ne pas être contrôlés par l’état ou ne pas être indépendants des émetteurs."
   },
   {
-    title: "",
-    description: "Le bon de souscription est un instrument financier qui donne le droit de souscrire une action à un prix fixé à une date déterminée. \r\nCaractéristiques : les bons de souscription donnent le droit d'acheter une quantité d'actions à un prix déterminé (prix d'exercice) jusqu'à une date donnée. Ces bons sont des titres librement négociables et cotés en bourse, ils peuvent être exercés de leur date d'émission à leur date d'échéance (entre 3 et 5 ans). \r\nIntérêt : le bon permet d'être intéressé à la hausse ou à la baisse d'une action sans avoir à y consacrer le même montant de capitaux qu'en achetant directement des actions. \r\nRisque : il est identique à celui du warrant. Le bon de souscription réagit en fonction de la volatilité de son sous-jacent."
-  },
-  {
     title: "Sharpe",
     description: "Très utilisé pour mesurer la qualité d'un gérant, le ratio de Sharpe compare le risque d'un fonds et sa performance à la rentabilité d'un placement sans risque (obligations d'Etat). Il se calcule comme suit :\r\n(Performance du fonds - Performance du taux sans risque) /la volatilité\r\nPlus le ratio est élevé et meilleur est le fonds. Cela veut dire que le gérant atteint une bonne rentabilité en minimisant la volatilité , donc le risque. Les comparaisons doivent se faire entre des OPCVM d'une même catégorie et qui ont un même style de gestion.\r\nLe ratio de Sharpe renseigné dans le sélectionneur Fortuneo est calculé pour une période de 3 ans glissants, chaque jour ouvré."
   },

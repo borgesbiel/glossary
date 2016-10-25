@@ -1,0 +1,5 @@
+<ul class="title">
+  <% @words.each do |word| %>
+    <li style="display:none;" id="title_<%= clean_title(word) %>"><a><%= word.title %></a></li>
+  <% end %>
+</ul>
